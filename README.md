@@ -24,7 +24,7 @@ WEVar is implemented by Python3.
 Download [Base Score](https://indiana-my.sharepoint.com/personal/yw146_iu_edu/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fyw146%5Fiu%5Fedu%2FDocuments%2FBase%2Ezip&parent=%2Fpersonal%2Fyw146%5Fiu%5Fedu%2FDocuments&originalPath=aHR0cHM6Ly9pbmRpYW5hLW15LnNoYXJlcG9pbnQuY29tLzp1Oi9nL3BlcnNvbmFsL3l3MTQ2X2l1X2VkdS9FVlZ3N3FFckNXSkZsMVhHTkVTSnN4Z0JtU0dqV0JWN1ZESXV1czZsNWZJdmZRP3J0aW1lPWgzVHg5VFFTMkVn)
 
 ```
-unzip Base.zip Base
+unzip Base.zip
 ```
 
 
