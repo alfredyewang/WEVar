@@ -86,7 +86,7 @@ python3 src/WEVar.py --prediction --Context HGMD --data_dir data --test_file tes
 ```
 The WEVar score will be saved res_dir folder. You may select different context (eg: HGMD, eQTL, GWAS, Allele_imbanlace)
 
-#### Train WEVar model
+### Train WEVar model
 
 ```
 python3 src/WEVar.py --train --Context HGMD --data_dir data --train_file CAGI --num_fold 10 --kde_kde_bandwidth 0.1
@@ -95,5 +95,5 @@ python3 src/WEVar.py --train --Context HGMD --data_dir data --train_file CAGI --
 The program will train WEVar model based on k-fold cross validation, save all files to pdf directory, and draw plots.
 
 <center>
-<div align=center><img width="400" height="300" src="https://github.com/alfredyewang/WEVar/blob/master/doc/CAGI.png"/></div>
+<div align=center><img width="450" height="300" src="https://raw.githubusercontent.com/alfredyewang/WEVar/master/doc/CAGI.png"/></div>
 </center>  
