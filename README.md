@@ -43,6 +43,7 @@ You can see the input arguments for WEVar by help option:
 usage: WEVar.py [-h] [--prediction] [--data_dir <data_directory>]
                 [--test_file TEST_FILE] [--res_dir <data_directory>]
                 [--Context CONTEXT] [--train] [--train_file TRAIN_FILE]
+                [--num_fold NUM_FOLD] [--kde_kde_bandwidth KDE_KDE_BANDWIDTH]
 
 WEVar: A novel statistical learning framework for predicting non-coding
 genetic variants
@@ -61,11 +62,13 @@ optional arguments:
   --train               Use this option for train WEVar model
   --train_file TRAIN_FILE
                         The test SNPs file
-
+  --num_fold NUM_FOLD   k-fold cross validation
+  --kde_kde_bandwidth KDE_KDE_BANDWIDTH
+                        the bandwidth of kde estimation
 
 ```
 
-## Input File Format
+### Input File Format
 WEVar takes UCSC Genome Browser BED file. The BED fields are:
 
 - Chromosome  The name of the chromosome (e.g. chr3, chrY, chr2_random) or scaffold (e.g. scaffold10671).
@@ -78,48 +81,19 @@ The first three are required for predicting WEVar score, and all are necessary f
 ### Predict WEVar Score
 
 ```
-python3 src/WEVar.py --prediction
+python3 src/WEVar.py --prediction --Context HGMD --data_dir data --test_file test_snps --res_dir res
 
 ```
-The WEVar score will be saved res_dir folder
-#### Evaluate the well-trained model
+The WEVar score will be saved res_dir folder. You may select different context (eg: HGMD, eQTL, GWAS, Allele_imbanlace)
+
+#### Train WEVar model
 
 ```
+python3 src/WEVar.py --train --Context HGMD --data_dir data --train_file CAGI --num_fold 10 --kde_kde_bandwidth 0.1
 
 ```
-The program will evaluate the well-trained model, draw a R-squared figure, and save it to result directory.
+The program will train WEVar model based on k-fold cross validation, save all files to pdf directory, and draw plots.
 
 <center>
-<div align=center><img width="400" height="300" src="https://github.com/alfredyewang/MDeep/blob/master/result/USA/result.jpg"/></div>
+<div align=center><img width="400" height="300" src="https://github.com/alfredyewang/WEVar/blob/master/doc/CAGI.png"/></div>
 </center>  
-
-
-#### Test the model with unlabelled data
-
-```
-python3 src/MDeep.py --test --test_file data/USA/X_test.npy  --correlation_file data/USA/c.npy --result_dir result/USA --model_dir model --outcome_type continous --batch_size 16 --max_epoch 2000 --learning_rate 5e-3 --dropout_rate 0.5 --window_size 8 8 8 --kernel_size 64 64 32 --strides 4 4 4
-```
-The program will take the unlabelled test file and save the prediction result to result directory.
-
-
-### Malawian Twin pairs Human Gut Microbiome data (Binary-Outcome)
-#### Train the model
-The USA Human Gut Microbiome data contains 995 samples with 2291 OTUs.
-```
-python3 src/MDeep.py --train --data_dir data/Malawiantwin_pairs --model_dir model --outcome_type binary --batch_size 32 --max_epoch 500 --learning_rate 1e-4 --dropout_rate 0.5 --window_size 128 4 --kernel_size 32 32 --strides 64 2
-```
-#### Evaluate the well-trained model
-
-```
-python3 src/MDeep.py --evaluation --data_dir data/Malawiantwin_pairs --result_dir result/Malawiantwin_pairs --model_dir model --outcome_type binary --batch_size 32 --max_epoch 500 --learning_rate 1e-4 --dropout_rate 0.5 --window_size 128 4 --kernel_size 32 32 --strides 64 2
-```
-The program will draw a ROC figure and save it to result directory.
-
-<center>
-<div align=center><img width="400" height="300" src="https://github.com/alfredyewang/MDeep/blob/master/result/Malawiantwin_pairs/result.jpg"/></div>
-</center>  
-
-#### Test the model with unlabelled data
-```
-python3 src/MDeep.py --test --test_file data/Malawiantwin_pairs/X_test.npy --correlation_file data/Malawiantwin_pairs/c.npy --result_dir result/Malawiantwin_pairs --model_dir model --outcome_type binary --batch_size 32 --max_epoch 500 --learning_rate 1e-4 --dropout_rate 0.5 --window_size 128 4 --kernel_size 32 32 --strides 64 2
-```
