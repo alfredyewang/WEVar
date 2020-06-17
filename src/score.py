@@ -2,8 +2,8 @@
 import numpy as np
 import pandas as pd
 import pyranges as pr
-path= '/media/ye/Genomics/rbase/'
-df = pd.read_csv(path+'t', sep='\t')
+path= './'
+df = pd.read_csv(path+'Base', sep='\t')
 df['#Chrom'] = 'chr' + df['#Chrom'].astype(str)
 df['End'] = df['Pos_end']
 df = df[['#Chrom', 'Pos_end','End','Eigen', 'CADD', 'DANN', 'FATHMM-MKL', 'FunSeq2', 'LINSIGHT',"Gwava_Region",'Gwava_TSS',"Gwava_unmatched"]]

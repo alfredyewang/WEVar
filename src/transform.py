@@ -14,9 +14,9 @@ def transform(score, methods, m=0.1):
     pdfs2=[]
 
     for k in range(9):
-        with open('../pdf/{}/{}/{}_training_1.cp.pkl'.format(methods,m, k), 'rb') as f:
+        with open('pdf/{}/{}/{}_training_1.cp.pkl'.format(methods,m, k), 'rb') as f:
             kde1 = cloudpickle.load(f)
-        with open('../pdf/{}/{}/{}_training_2.cp.pkl'.format(methods,m,k), 'rb') as f:
+        with open('pdf/{}/{}/{}_training_2.cp.pkl'.format(methods,m,k), 'rb') as f:
             kde2 = cloudpickle.load(f)
         pdfs1.append(kde1)
         pdfs2.append(kde2)
