@@ -72,7 +72,7 @@ optional arguments:
 WEVar takes UCSC Genome Browser BED file. The BED fields are:
 
 - Chromosome  The name of the chromosome (e.g. chr3, chrY).
-- Start The starting position of the feature in the chromosome or scaffold.
+- Start The starting position of the feature in the chromosome.
 - End The ending position of the feature in the chromosome.
 - Labels Functional or Benign
 
