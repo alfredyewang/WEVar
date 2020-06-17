@@ -71,9 +71,9 @@ optional arguments:
 ### Input File Format
 WEVar takes UCSC Genome Browser BED file. The BED fields are:
 
-- Chromosome  The name of the chromosome (e.g. chr3, chrY, chr2_random) or scaffold (e.g. scaffold10671).
-- Start The starting position of the feature in the chromosome or scaffold. The first base in a chromosome is numbered 0.
-- End The ending position of the feature in the chromosome or scaffold.
+- Chromosome  The name of the chromosome (e.g. chr3, chrY).
+- Start The starting position of the feature in the chromosome or scaffold.
+- End The ending position of the feature in the chromosome.
 - Labels Functional or Benign
 
 The first three are required for predicting WEVar score, and all are necessary for training WEVar model. Please see data/test_SNPs file as reference
