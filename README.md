@@ -89,7 +89,7 @@ The WEVar score will be saved res_dir folder. You may select different context (
 ### Train WEVar model
 
 ```
-python3 src/WEVar.py --train --Context HGMD --data_dir data --train_file CAGI --num_fold 10 --kde_kde_bandwidth 0.1
+python3 src/WEVar.py --train --data_dir data --train_file CAGI --num_fold 10 --kde_kde_bandwidth 0.1
 
 ```
 The program will train WEVar model based on k-fold cross validation, save all files to pdf directory, and draw plots.
