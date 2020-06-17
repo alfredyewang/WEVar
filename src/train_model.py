@@ -166,7 +166,6 @@ def test(X,Y,file,kde_bandwidth=0.1, num_fold= 10):
     r2.append(np.array([r2_wevar]).mean())
     method.append('WEVar')
     df_testing = pd.DataFrame({'Methods': method, 'AUROC': AUC, 'AUPR': AUC_PR, 'R2': r2})
-    print(df_testing)
     ax = sns.scatterplot(x="AUPR", y="AUROC", hue="Methods", size="R2",palette=cur,
                     hue_order=["CADD","Eigen", 'LINSIGHT',"DANN","GWAVA_Unmatched","GWAVA_TSS","GWAVA_Region", "FunSeq2", "FATHMM_MKL",'Unweighted','WEVar'],
                     sizes= (100,500),data=df_testing)
