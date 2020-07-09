@@ -20,6 +20,7 @@ WEVar is implemented by Python3.
 - seaborn >=0.9.0
 - matplotlib >=3.1.0
 - cvxpy >= 1.0.23
+- cloudpickle >=1.1.1
 
 Download [Base Score](https://drive.google.com/file/d/1Jwwuo01ZL1MlJHd1VVR0PaJdyI9MLgaz/view?usp=sharing)
 
