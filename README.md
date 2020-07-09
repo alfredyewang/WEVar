@@ -18,7 +18,7 @@ WEVar is implemented by Python3.
 - scipy >= 1.2.1
 - scikit-learn >= 0.20.3
 - seaborn >=0.9.0
-- matplotlib >=3.1.0
+- matplotlib >=3.0.3
 - cvxpy >= 1.0.23
 - cloudpickle >=1.1.1
 
