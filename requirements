@@ -6,3 +6,4 @@ seaborn >=0.9.0
 matplotlib >=3.1.0
 cvxpy >= 1.0.23
 pyranges == 0.0.79
+cloudpickle ===1.1.1
