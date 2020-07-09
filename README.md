@@ -34,7 +34,7 @@ git clone https://github.com/alfredyewang/WEVar
 ```
 Install requirements
 ```
-pip3 install -r requirements.txt
+pip3 install -r requirements
 ```
 ## Usage
 You can see the input arguments for WEVar by help option:
