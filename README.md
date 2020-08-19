@@ -6,8 +6,12 @@ We propose WEVar, a new weighted ensemble learning framework, to predict and pri
 <div align=center><img width="1200" height="380" src="https://raw.githubusercontent.com/alfredyewang/WEVar/master/doc/WEVAR.jpg"/></div>
 </center>  
 
-
-
+## Usage of Pre-computed WEVar Score
+- Download WEVar Score (hg19) and tabix index file [WEVar]()
+- Get the WEVar prediction scores (e.g chr1:100676)
+```
+tabix WEVar.gz 1:100676-100676
+```
 ## Requirements and Installation
 
 WEVar is implemented by Python3.
