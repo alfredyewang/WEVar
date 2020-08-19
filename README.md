@@ -7,7 +7,7 @@ We propose WEVar, a new weighted ensemble learning framework, to predict and pri
 </center>  
 
 ## Pre-computed WEVar Score for 1000 Genomes Project
-Download WEVar Score (hg19) and tabix index file [WEVar](https://drive.google.com/drive/folders/1sUzrNC5V3gFNklR5ARUQFPxVJGJ4XsQO?usp=sharing)
+Download WEVar Score (hg19) and tabix index file from [link](https://drive.google.com/drive/folders/1sUzrNC5V3gFNklR5ARUQFPxVJGJ4XsQO?usp=sharing). <br />
 Get the WEVar prediction scores (e.g chr1:100676)
 ```
 tabix WEVar.gz 1:100676-100676
